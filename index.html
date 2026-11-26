@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Discover Binga | Lake Kariba, Zimbabwe</title>
+<meta name="description" content="Stay, play and spot wildlife in Binga on Lake Kariba, Zimbabwe. Twamutambula: welcome!">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<noscript><style>.panel{display:block!important}</style></noscript>
+</head>
+<body>
+<header>
+  <a class="brand" href="#home"><b>B</b><span>DISCOVER BINGA<small>LAKE KARIBA · ZIMBABWE</small></span></a>
+  <nav aria-label="Main"><a href="#home">Home</a><a href="#accommodation">Accommodation</a><a href="#activities">Activities</a><a href="#animals">Animals</a></nav>
+</header>
+
+<main>
+<section class="panel" id="home">
+  <div class="hero">
+    <p class="eyebrow">TWAMUTAMBULA · WELCOME</p>
+    <h1>Welcome to <em>Binga.</em></h1>
+    <p class="lead">Where the Tonga people, the wild shores of Lake Kariba and the open African sky come together. Stay by the water, get out on the lake and meet the wildlife.</p>
+    <div class="cta"><a class="button" href="#accommodation">See where to stay →</a><button class="button ghost reserve" data-dest="">Reserve a place</button></div>
+  </div>
+  <div class="tiles">
+    <a class="tile" href="#accommodation" style="--img:url(images/accommodation/accommodation-02.jpg)"><small>01</small><h3>Accommodation</h3><p>Thatched suites, lakeside decks and quiet pools.</p><span>View stays ↗</span></a>
+    <a class="tile" href="#activities" style="--img:url(images/activities/activity-01.jpg)"><small>02</small><h3>Activities</h3><p>Houseboats, kayaks, game drives, horses and more.</p><span>Explore activities ↗</span></a>
+    <a class="tile" href="#animals" style="--img:url(images/animals/animal-20.jpg)"><small>03</small><h3>Animals</h3><p>Elephants, lions, leopards, hippos, birds and more.</p><span>Meet the wildlife ↗</span></a>
+  </div>
+  <div class="glass about">
+    <div><p class="eyebrow">ABOUT BINGA</p><h2>The heart of <em>Tonga</em> country</h2></div>
+    <p>Binga sits on the southern shore of Lake Kariba in northern Zimbabwe, home to the Tonga (BaTonga), a people of the Zambezi Valley with deep ties to the river. The area is known for hand-woven Binga baskets, drum and dance traditions, and stories of the river spirit Nyaminyami.<br><br><b>Come for the lake. Stay for the people.</b></p>
+  </div>
+</section>
+
+<section class="panel" id="accommodation">
+  <div class="head glass"><div><p class="eyebrow">01 — WHERE TO STAY</p><h2>Rest by the <em>water.</em></h2></div><p>Thatched suites, canopy beds and sunset views over the lake. Tap any photo to enlarge it, then send a reservation request.</p></div>
+  <div class="grid cards" id="acc-grid"></div>
+</section>
+
+<section class="panel" id="activities">
+  <div class="head glass"><div><p class="eyebrow">02 — THINGS TO DO</p><h2>Get out on the <em>lake.</em></h2></div><p>From slow sunset cruises to beach games and bush drives, there is something for every pace. Tap a photo to enlarge it.</p></div>
+  <div class="grid cards" id="act-grid"></div>
+</section>
+
+<section class="panel" id="animals">
+  <div class="head glass"><div><p class="eyebrow">03 — WILDLIFE</p><h2>Where the wild <em>things roam.</em></h2></div><p>The Zambezi Valley and Lake Kariba are alive with wildlife. Filter by type and tap a photo to see it larger.</p></div>
+  <div class="chips" role="group" aria-label="Filter animals"></div>
+  <div class="wall" id="animal-grid"></div>
+  <p class="note">Wildlife shown is typical of the Zambezi Valley and Lake Kariba region. Sightings vary by season, location and luck.</p>
+</section>
+</main>
+
+<footer><b>DISCOVER BINGA</b><span>Twamutambula · Enjoy your stay</span><a href="#home">BACK TO HOME ↑</a><small>© 2026 DISCOVER BINGA · LAKE KARIBA, ZIMBABWE</small></footer>
+
+<dialog id="lightbox" aria-label="Photo viewer">
+  <button class="lb-close" aria-label="Close">×</button>
+  <button class="lb-nav prev" aria-label="Previous photo">‹</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="lb-nav next" aria-label="Next photo">›</button>
+</dialog>
+
+<dialog id="reserve" aria-labelledby="rt"><form method="dialog" id="rform">
+  <button type="button" class="close" aria-label="Close">×</button>
+  <p class="eyebrow">RESERVATION REQUEST</p><h2 id="rt">Reserve a place</h2>
+  <label>Stay or activity<select name="dest" required></select></label>
+  <div class="row"><label>Your name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label></div>
+  <div class="row"><label>Preferred date<input name="date" type="date" required></label><label>Guests<input name="guests" type="number" min="1" max="30" value="2" required></label></div>
+  <label>Notes (optional)<textarea name="notes" rows="3" placeholder="Interests, accessibility needs, how long you'd like to stay"></textarea></label>
+  <button class="button" type="submit">SEND RESERVATION REQUEST</button>
+  <p class="fine">Your request is emailed directly to the host. Nothing is booked until the host confirms.</p>
+</form></dialog>
+<script src="script.js"></script>
+</body>
+</html>
